@@ -47,11 +47,11 @@ This setup provides a reproducible, scalable, and fully automated dev environmen
    git clone https://github.com/<username>/azure-devbox-automation.git
    cd azure-devbox-automation
 
-2. **Run the Ansible playbook**
+### Run the Ansible playbook
   ```bash
   ansible-playbook ansible/setup.yml --ask-become-pass
 
-3.** Verify installation**
+###  Verify installation
   ```bash
   python3 --version
   git --version
