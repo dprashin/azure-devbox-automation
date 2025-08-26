@@ -1,0 +1,12 @@
+# Python
+__pycache__/
+*.pyc
+
+# Ansible
+*.retry
+*.log
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.*
