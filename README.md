@@ -48,9 +48,11 @@ This setup provides a reproducible, scalable, and fully automated dev environmen
    cd azure-devbox-automation
 
 ### Run the Ansible playbook
-  ansible-playbook ansible/install_dev_tools.yml --ask-become-pass
+   ```bash 
+   ansible-playbook ansible/install_dev_tools.yml --ask-become-pass
 
-###  Verify installation
+###  Verify installation	
+  ```bash
   python3 --version
   git --version
   code --version
