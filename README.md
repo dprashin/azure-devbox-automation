@@ -65,4 +65,11 @@ This setup provides a reproducible, scalable, and fully automated dev environmen
 ### Azure CLI commands
    ```bash  
    az login
-   az account list --all   
+   az account list --all 
+   az account show 
+```
+
+### Terraform Commands
+
+```bash
+terraform fmt (if it fails then run sudo snap install terraform --classic)
