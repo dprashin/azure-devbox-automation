@@ -61,3 +61,8 @@ This setup provides a reproducible, scalable, and fully automated dev environmen
    git --version
    code --version
    az --version
+
+### Azure CLI commands
+   ```bash  
+   az login
+   az account list --all   
