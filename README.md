@@ -66,10 +66,14 @@ This setup provides a reproducible, scalable, and fully automated dev environmen
    ```bash  
    az login
    az account list --all 
-   az account show 
+   az account show
+   az account list --output table
 ```
 
 ### Terraform Commands
 
 ```bash
 terraform fmt (if it fails then run sudo snap install terraform --classic)
+terraform init
+terraform plan
+terraform apply
