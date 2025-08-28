@@ -81,3 +81,4 @@ terraform apply / terraform apply -auto-approve
 terraform state list
 terraform plan -destroy
 terraform apply destroy / terraform destroy
+terraform state show azurerm_public_ip.mtc-ip
