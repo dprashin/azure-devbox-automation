@@ -82,3 +82,32 @@ terraform state list
 terraform plan -destroy
 terraform apply destroy / terraform destroy
 terraform state show azurerm_public_ip.mtc-ip
+
+
+```
+### SSH into remote linux machine 
+
+Create key first 
+```bash
+ssh-keygn -t rsa
+```
+copy public ip using:
+```bash
+terraform state show azurerm_linux_virtual_machine.mtc-vm
+```
+Then, 
+```bash
+ssh -i ~/.ssh/mtcazurekey adminuser@20.61.208.86
+```
+
+Verify that you're logged into linux machine
+
+```bash
+lsb_release -a
+```
+
+Exit the remote linux machine
+
+```bash
+exit
+```
