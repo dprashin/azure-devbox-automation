@@ -68,6 +68,7 @@ This setup provides a reproducible, scalable, and fully automated dev environmen
    az account list --all 
    az account show
    az account list --output table
+   az group delete --name mtc-resources --yes --no-wait
 ```
 
 ### Terraform Commands
@@ -76,4 +77,7 @@ This setup provides a reproducible, scalable, and fully automated dev environmen
 terraform fmt (if it fails then run sudo snap install terraform --classic)
 terraform init
 terraform plan
-terraform apply
+terraform apply / terraform apply -auto-approve
+terraform state list
+terraform plan -destroy
+terraform apply destroy / terraform destroy
