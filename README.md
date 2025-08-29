@@ -4,7 +4,7 @@ Automating Linux developer tools setup with Ansible and provisioning an Azure-ba
 
 ---
 
-## Project Overview
+## Project Overview[In progress]
 
 This project is designed to streamline the setup of a developer environment from **local Linux machines** to a **remote Azure-based devbox**. It combines **Ansible** for local automation with **Terraform** for cloud infrastructure provisioning, enabling a seamless workflow for developers.
 
