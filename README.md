@@ -153,6 +153,6 @@ ssh -i ~/.ssh/mtcazurekey  adminuser@20.XX........
 
 Verify that docker is installed in the vm
 
-``bash
+```bash
 docker --version
 ```
