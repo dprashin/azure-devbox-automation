@@ -111,3 +111,48 @@ Exit the remote linux machine
 ```bash
 exit
 ```
+
+### SSH Trobuleshooting
+
+When connecting to the VM
+```bash
+ssh -i ~/.ssh/mtcazurekey adminuser@20.xx.xx.xx
+```
+
+you may encounter the following error:
+
+```bash
+Warning: Identity file /home/dev/.ssh/mtcazurekey not accessible: No such file or directory.
+Add correct host key in /home/dev/.ssh/known_hosts to get rid of this message.
+Offending ECDSA key in /home/dev/.ssh/known_hosts:6
+```
+Cause
+
+The SSH client has a cached host key that no longer matches the VM (e.g., the VM was recreated or its IP changed).
+
+Solution
+
+Remove the old host key entry from your known_hosts file:
+
+Solution
+
+Remove the old host key entry from your known_hosts file:
+
+```bash
+ssh-keygen -f "/home/dev/.ssh/known_hosts" -R "20.xx.xx.xx"
+```
+You'll get the following message
+```bash
+/home/dev/.ssh/known_hosts updated.
+```
+
+Now you can ssh into the remote host
+```bash
+ssh -i ~/.ssh/mtcazurekey  adminuser@20.XX........
+```
+
+Verify that docker is installed in the vm
+
+``bash
+docker --version
+```
