@@ -127,4 +127,13 @@ resource "azurerm_linux_virtual_machine" "mtc-vm" {
     sku       = "22_04-lts"
     version   = "latest"
   }
+
+  provisioner "local-exec" {
+    command = templatefile("linux-ssh-script.tpl", {
+      hostname = self.public_ip_address,
+      user = "adminuser",
+      identityfile = "~/.ssh/mtcazurekey"
+    })
+    interpreter = ["bash", "-c"]
+  }
 }
