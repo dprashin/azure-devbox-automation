@@ -159,27 +159,25 @@ docker --version
 
 ### SSH Config Setup in VS Code  
 
-I use the **Remote-SSH** extension for VS Code (by Microsoft) to open a remote terminal and connect directly to my VM.  
-This works by using an SSH configuration file (`~/.ssh/config`) where I add my VM’s host details. VS Code then reads this configuration to establish the connection.  
+Use the **Remote-SSH** extension for VS Code (by Microsoft) to open a remote terminal and connect directly to remote VM.  
+This works by using an SSH configuration file (`~/.ssh/config`) where you need to add remote VM’s host details. VS Code then reads this configuration to establish the connection.  
 
-## Steps I Follow  
-
-1. I install the extension: **Remote-SSH (Microsoft)**.  
-2. I press `Ctrl + Shift + P` and select **Remote-SSH: Add New SSH Host**.  
-3. I enter my SSH command, for example:  
+1. Install the extension: **Remote-SSH (Microsoft)**.  
+2. Press `Ctrl + Shift + P` and select **Remote-SSH: Add New SSH Host**.  
+3. Enter SSH command:  
    ```bash
    ssh adminuser@<remote-vm-ip>
-
+   ```
 
 I choose the SSH config file (usually located in ~/.ssh/).
 
 
-Terraform provisioner in then used to configure VS Code on local machine so I can SSH into the remote VM automatically.
+Terraform provisioner is then used to configure VS Code on local machine so I can SSH into the remote VM automatically.
 
 Note:
 
 Provisioner success or failure is not tracked in Terraform state.
 
-If something goes wrong, I just run it again.
+If something goes wrong, just run it again.
 
 There is no rollback option.
